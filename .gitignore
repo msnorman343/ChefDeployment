@@ -1,0 +1,6 @@
+
+.chef/knife.rb
+
+*.crt
+
+*.pem
