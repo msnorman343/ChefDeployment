@@ -1,23 +1,9 @@
 DEPENDENCIES
-  icinga2
+  auto-update
 
 GRAPH
-  apache2 (3.2.2)
   apt (5.1.0)
     compat_resource (>= 12.16.3)
+  auto-update (0.3.0)
+    apt (>= 2.4.0)
   compat_resource (12.16.3)
-  icinga2 (2.9.1)
-    apache2 (>= 0.0.0)
-    apt (>= 0.0.0)
-    pnp4nagios (>= 0.0.0)
-    ulimit (>= 0.0.0)
-    yum (~> 3.0)
-    yum-epel (>= 0.0.0)
-  pnp4nagios (0.2.8)
-    apache2 (>= 0.0.0)
-    rrdtool (>= 0.0.0)
-  rrdtool (0.2.0)
-  ulimit (0.4.0)
-  yum (3.13.0)
-  yum-epel (2.1.1)
-    compat_resource (>= 12.16.3)
