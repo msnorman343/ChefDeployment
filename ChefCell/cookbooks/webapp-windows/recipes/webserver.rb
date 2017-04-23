@@ -6,7 +6,7 @@
 
 #enable IIS role
 
-dsc_scipt 'Web-Server' do
+dsc_script 'Web-Server' do
   code <<-EOH
   WindowsFeature InstallWebServer
   {
@@ -18,7 +18,7 @@ end
 
 #enable ASP.net role
 
-dsc_scipt 'ASP.NET' do
+dsc_script 'ASP.NET' do
   code <<-EOH
   WindowsFeature InstallAspDotNet45
   {
@@ -30,7 +30,7 @@ end
 
 #enable IIS MGMT
 
-dsc_scipt 'Web-Mgmt-Console' do
+dsc_script 'Web-Mgmt-Console' do
   code <<-EOH
   WindowsFeature InstallIISConsole
   {
@@ -41,7 +41,7 @@ dsc_scipt 'Web-Mgmt-Console' do
 end
 
 #remove default site
-include_recipe 'iis:remove_default_site'
+include_recipe 'iis::remove_default_site'
 
 iis_site 'Default Site' do
   action [:stop, :delete]
@@ -55,7 +55,7 @@ app_directory = 'c:\inetpub\apps\Customers'
 site_directory = 'c:\inetpub\site\Customers'
 
 #download prebuilt customers app and extract
-window_zipfile app_directory do
+windows_zipfile app_directory do
   source 'https://github.com/learn-chef/customers-web-app-aspnet/releases/download/v0.1.0/Customers.zip'
   action :unzip
   not_if { ::File.exists?(app_directory)}
