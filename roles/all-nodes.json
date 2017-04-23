@@ -1,0 +1,16 @@
+{
+	"name": "all-nodes",
+	"description": "all Server role",
+	"json_class": "Chef::Role",
+	"default_attributes": {
+	},
+
+	"override_attributes":{
+	},
+	"chef_type": "role",
+	"run_list": ["recipe[all-nodes]"   ],
+   "env_run_lists": {
+   }
+
+
+}
