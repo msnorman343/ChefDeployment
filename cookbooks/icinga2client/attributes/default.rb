@@ -3,9 +3,9 @@
 # http://docs.icinga.org/icinga2/latest/doc/module/icinga2/chapter/getting-started#getting-started
 
 default['icinga2client']['version'] = value_for_platform(
-  %w[centos redhat fedora amazon] => { 'default' => '2.8.0-1' },
-  %w[debian ubuntu raspbian] => { 'default' => '2.8.0-1' },
-  %w[windows] => { 'default' => '2.8.0' }
+  %w[centos redhat fedora amazon] => { 'default' => '2.8.4-1' },
+  %w[debian ubuntu raspbian] => { 'default' => '2.8.4-1' },
+  %w[windows] => { 'default' => '2.8.4' }
 )
 
 default['icinga2client']['ignore_version'] = false
@@ -112,4 +112,4 @@ end
 default['icinga2client']['constants']['NodeName'] = node['fqdn']
 default['icinga2client']['constants']['PluginDir'] = node['icinga2client']['plugins_dir']
 default['icinga2client']['constants']['ManubulonPluginDir'] = node['icinga2client']['plugins_dir']
-default['icinga2client']['constants']['TicketSalt'] = 'ed25aed394c4bf7d236b347bb67df466'
+default['icinga2client']['constants']['TicketSalt'] = '96e29d9c9e1b8228901207c2c817af01'

@@ -1,0 +1,19 @@
+{
+	"name": "icingaServers",
+	"description": "Icinga Server role",
+	"json_class": "Chef::Role",
+	"default_attributes": {
+	},
+
+	"override_attributes":{
+	},
+	"chef_type": "role",
+	"run_list": ["recipe[icinga2client::default]",
+                "recipe[icinga2client::install]",
+								"recipe[icinga2client::service]"
+   ],
+   "env_run_lists": {
+   }
+
+
+}
