@@ -5,3 +5,4 @@
 
 *.pem
 ChefCell/.chef/knife.rb
+cookbooks/icinga2client/attributes/default.rb
